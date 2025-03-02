@@ -22,8 +22,9 @@ const btn_equals_button = document.getElementById('equals_button')
 const btn_division_operation = document.getElementById('division_operation')
 
 // Referencias destinadas a las operaciones
-let numsArray = [];
-let operationToDo;
+let lastOperand = null;
+let operationToDo = null;
+let lastOperationWasEquals = null
 
 
 // Eventos para el muestreo de números en pantalla (botones numéricos)
@@ -31,13 +32,15 @@ btn_7.addEventListener('click', function() {
     if (resultScreenCalculator.textContent == '0') {
         resultScreenCalculator.textContent = '7'
     } else {
-        if (!operationToDo) {
-            numsResultArray = resultScreenCalculator.textContent.split("")
+        if (!lastOperationWasEquals) {
+            let numsResultArray = resultScreenCalculator.textContent.split("")
             numsResultArray.push('7')
             resultScreenCalculator.textContent = numsResultArray.join("")
         } else {
             resultScreenCalculator.textContent = '7'
+            lastOperationWasEquals = null
         }
+        
     }
 })
 
@@ -45,12 +48,13 @@ btn_8.addEventListener('click', function() {
     if (resultScreenCalculator.textContent == '0') {
         resultScreenCalculator.textContent = '8'
     } else {
-        if (!operationToDo) {
-            numsResultArray = resultScreenCalculator.textContent.split("")
+        if (!lastOperationWasEquals) {
+            let numsResultArray = resultScreenCalculator.textContent.split("")
             numsResultArray.push('8')
             resultScreenCalculator.textContent = numsResultArray.join("")
         } else {
             resultScreenCalculator.textContent = '8'
+            lastOperationWasEquals = null
         }
     }
 })
@@ -59,12 +63,13 @@ btn_9.addEventListener('click', function() {
     if (resultScreenCalculator.textContent == '0') {
         resultScreenCalculator.textContent = '9'
     } else {
-        if (!operationToDo) {
-            numsResultArray = resultScreenCalculator.textContent.split("")
+        if (!lastOperationWasEquals) {
+            let numsResultArray = resultScreenCalculator.textContent.split("")
             numsResultArray.push('9')
             resultScreenCalculator.textContent = numsResultArray.join("")
         } else {
             resultScreenCalculator.textContent = '9'
+            lastOperationWasEquals = null
         }
     }
 })
@@ -73,12 +78,13 @@ btn_4.addEventListener('click', function() {
     if (resultScreenCalculator.textContent == '0') {
         resultScreenCalculator.textContent = '4'
     } else {
-        if (!operationToDo) {
-            numsResultArray = resultScreenCalculator.textContent.split("")
+        if (!lastOperationWasEquals) {
+            let numsResultArray = resultScreenCalculator.textContent.split("")
             numsResultArray.push('4')
             resultScreenCalculator.textContent = numsResultArray.join("")
         } else {
             resultScreenCalculator.textContent = '4'
+            lastOperationWasEquals = null
         }
     }
 })
@@ -87,12 +93,13 @@ btn_5.addEventListener('click', function() {
     if (resultScreenCalculator.textContent == '0') {
         resultScreenCalculator.textContent = '5'
     } else {
-        if (!operationToDo) {
-            numsResultArray = resultScreenCalculator.textContent.split("")
+        if (!lastOperationWasEquals) {
+            let numsResultArray = resultScreenCalculator.textContent.split("")
             numsResultArray.push('5')
             resultScreenCalculator.textContent = numsResultArray.join("")
         } else {
             resultScreenCalculator.textContent = '5'
+            lastOperationWasEquals = null
         }
     }
 })
@@ -101,12 +108,13 @@ btn_6.addEventListener('click', function() {
     if (resultScreenCalculator.textContent == '0') {
         resultScreenCalculator.textContent = '6'
     } else {
-        if (!operationToDo) {
-            numsResultArray = resultScreenCalculator.textContent.split("")
+        if (!lastOperationWasEquals) {
+            let numsResultArray = resultScreenCalculator.textContent.split("")
             numsResultArray.push('6')
             resultScreenCalculator.textContent = numsResultArray.join("")
         } else {
             resultScreenCalculator.textContent = '6'
+            lastOperationWasEquals = null
         }
     }
 })
@@ -115,12 +123,13 @@ btn_1.addEventListener('click', function() {
     if (resultScreenCalculator.textContent == '0') {
         resultScreenCalculator.textContent = '1'
     } else {
-        if (!operationToDo) {
-            numsResultArray = resultScreenCalculator.textContent.split("")
+        if (!lastOperationWasEquals) {
+            let numsResultArray = resultScreenCalculator.textContent.split("")
             numsResultArray.push('1')
             resultScreenCalculator.textContent = numsResultArray.join("")
         } else {
             resultScreenCalculator.textContent = '1'
+            lastOperationWasEquals = null
         }
     }
 })
@@ -129,12 +138,13 @@ btn_2.addEventListener('click', function() {
     if (resultScreenCalculator.textContent == '0') {
         resultScreenCalculator.textContent = '2'
     } else {
-        if (!operationToDo) {
-            numsResultArray = resultScreenCalculator.textContent.split("")
+        if (!lastOperationWasEquals) {
+            let numsResultArray = resultScreenCalculator.textContent.split("")
             numsResultArray.push('2')
             resultScreenCalculator.textContent = numsResultArray.join("")
         } else {
             resultScreenCalculator.textContent = '2'
+            lastOperationWasEquals = null
         }
     }
 })
@@ -143,12 +153,13 @@ btn_3.addEventListener('click', function() {
     if (resultScreenCalculator.textContent == '0') {
         resultScreenCalculator.textContent = '3'
     } else {
-        if (!operationToDo) {
-            numsResultArray = resultScreenCalculator.textContent.split("")
+        if (!lastOperationWasEquals) {
+            let numsResultArray = resultScreenCalculator.textContent.split("")
             numsResultArray.push('3')
             resultScreenCalculator.textContent = numsResultArray.join("")
         } else {
             resultScreenCalculator.textContent = '3'
+            lastOperationWasEquals = null
         }
     }
 })
@@ -157,12 +168,13 @@ btn_0.addEventListener('click', function() {
     if (resultScreenCalculator.textContent == '0') {
         resultScreenCalculator.textContent = '0'
     } else {
-        if (!operationToDo) {
-            numsResultArray = resultScreenCalculator.textContent.split("")
+        if (!lastOperationWasEquals) {
+            let numsResultArray = resultScreenCalculator.textContent.split("")
             numsResultArray.push('0')
             resultScreenCalculator.textContent = numsResultArray.join("")
         } else {
             resultScreenCalculator.textContent = '0'
+            lastOperationWasEquals = null
         }
     }
 })
@@ -172,9 +184,10 @@ btn_0.addEventListener('click', function() {
 btn_clear_button.addEventListener('click', function() {
     resultScreenCalculator.textContent = 0
 
-    // Reasigno el valor de 'operationToDo' y vacío el array 'numsArray'
-    operationToDo = undefined
-    numsArray = []
+    // Reasigno el valor de 'operationToDo' y 'lastOperand'
+    operationToDo = null
+    lastOperand = null
+    lastOperationWasEquals = null
 })
 
 btn_equals_button.addEventListener('click', function() {
@@ -183,49 +196,49 @@ btn_equals_button.addEventListener('click', function() {
         // No aplico ningún cambio
     } else {
         if (operationToDo == 'division') {
-            let firstOperand = numsArray[0]
             let secondOperand = resultScreenCalculator.textContent
 
-            let result = parseInt(firstOperand) / parseInt(secondOperand)
+            let result = parseInt(lastOperand) / parseInt(secondOperand)
             resultScreenCalculator.textContent = result
 
-            // Reasigno el valor de 'operationToDo' y vacío el array 'numsArray'
-            operationToDo = undefined
-            numsArray = []
+            // Reasigno el valor de 'operationToDo' y 'lastOperand'
+            operationToDo = null
+            lastOperand = result
+            lastOperationWasEquals = true
             
 
         } else if (operationToDo == 'multiply') {
-            let firstOperand = numsArray[0]
             let secondOperand = resultScreenCalculator.textContent
 
-            let result = parseInt(firstOperand) * parseInt(secondOperand)
+            let result = parseInt(lastOperand) * parseInt(secondOperand)
             resultScreenCalculator.textContent = result
 
-            // Reasigno el valor de 'operationToDo' y vacío el array 'numsArray'
-            operationToDo = undefined
-            numsArray = []
+            // Reasigno el valor de 'operationToDo' y 'lastOperand'
+            operationToDo = null
+            lastOperand = result
+            lastOperationWasEquals = true
 
         } else if (operationToDo == 'substract') {
-            let firstOperand = numsArray[0]
             let secondOperand = resultScreenCalculator.textContent
 
-            let result = parseInt(firstOperand) - parseInt(secondOperand)
+            let result = parseInt(lastOperand) - parseInt(secondOperand)
             resultScreenCalculator.textContent = result
 
-            // Reasigno el valor de 'operationToDo' y vacío el array 'numsArray'
-            operationToDo = undefined
-            numsArray = []
+            // Reasigno el valor de 'operationToDo' y 'lastOperand'
+            operationToDo = null
+            lastOperand = result
+            lastOperationWasEquals = true
 
         } else if (operationToDo == 'add') {
-            let firstOperand = numsArray[0]
             let secondOperand = resultScreenCalculator.textContent
 
-            let result = parseInt(firstOperand) + parseInt(secondOperand)
+            let result = parseInt(lastOperand) + parseInt(secondOperand)
             resultScreenCalculator.textContent = result
 
-            // Reasigno el valor de 'operationToDo' y vacío el array 'numsArray'
-            operationToDo = undefined
-            numsArray = []
+            // Reasigno el valor de 'operationToDo' y 'lastOperand'
+            operationToDo = null
+            lastOperand = result
+            lastOperationWasEquals = true
 
         } else {
             alert('No se ha seleccionado ninguna operación.')
@@ -235,36 +248,48 @@ btn_equals_button.addEventListener('click', function() {
 
 btn_division_operation.addEventListener('click', function() {
 
-    // Incluyo el número que se muestra en pantalla dentro del array 'numsArray'
-    numsArray.push(resultScreenCalculator.textContent)
+    // Marco el valor actual en pantalla como primer operando
+    lastOperand = resultScreenCalculator.textContent
 
     // Actualizo el valor de la variable que referencia a la operación
     operationToDo = 'division'
+
+    // Limpio el contenido en pantalla
+    resultScreenCalculator.textContent = ""
 })
 
 btn_multiply_operation.addEventListener('click', function() {
 
-    // Incluyo el número que se muestra en pantalla dentro del array 'numsArray'
-    numsArray.push(resultScreenCalculator.textContent)
+    // Marco el valor actual en pantalla como primer operando
+    lastOperand = resultScreenCalculator.textContent
 
     // Actualizo el valor de la variable que referencia a la operación
     operationToDo = 'multiply'
+
+    // Limpio el contenido en pantalla
+    resultScreenCalculator.textContent = ""
 })
 
 btn_substract_operation.addEventListener('click', function() {
 
-    // Incluyo el número que se muestra en pantalla dentro del array 'numsArray'
-    numsArray.push(resultScreenCalculator.textContent)
+    // Marco el valor actual en pantalla como primer operando
+    lastOperand = resultScreenCalculator.textContent
 
     // Actualizo el valor de la variable que referencia a la operación
     operationToDo = 'substract'
+
+    // Limpio el contenido en pantalla
+    resultScreenCalculator.textContent = ""
 })
 
 btn_add_operation.addEventListener('click', function() {
 
-    // Incluyo el número que se muestra en pantalla dentro del array 'numsArray'
-    numsArray.push(resultScreenCalculator.textContent)
+    // Marco el valor actual en pantalla como primer operando
+    lastOperand = resultScreenCalculator.textContent
 
     // Actualizo el valor de la variable que referencia a la operación
     operationToDo = 'add'
+
+    // Limpio el contenido en pantalla
+    resultScreenCalculator.textContent = ""
 })
