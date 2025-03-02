@@ -125,6 +125,33 @@ body {
     border-left: 3px solid #898989;
 }
 
+
+#btn_7:hover,
+#btn_8:hover,
+#btn_9:hover,
+#btn_4:hover,
+#btn_5:hover,
+#btn_6:hover,
+#btn_1:hover,
+#btn_2:hover,
+#btn_3:hover,
+#btn_0:hover,
+#add_operation:hover,
+#substract_operation:hover,
+#multiply_operation:hover,
+#equals_button:hover,
+#division_operation:hover,
+#clear_button:hover {
+    background: #f4b379;
+    background: linear-gradient(180deg,#f4b379 50%, #f07903 50%);
+    background-color: -webkit-linear-gradient(180deg,#f4b379 50%, #f07903 50%);
+    background-color: -moz-linear-gradient(180deg,#f4b379 50%, #f07903 50%);
+    border-top: 3px solid #f9f9f6;
+    border-right: 3px solid #f9f9f6;
+    border-bottom: 3px solid #a46424;
+    border-left: 3px solid #a46424;
+}
+
 #btn_7:active,
 #btn_8:active,
 #btn_9:active,
