@@ -248,48 +248,69 @@ btn_equals_button.addEventListener('click', function() {
 
 btn_division_operation.addEventListener('click', function() {
 
-    // Marco el valor actual en pantalla como primer operando
-    lastOperand = resultScreenCalculator.textContent
+    if (resultScreenCalculator.textContent != "") {
+        // Marco el valor actual en pantalla como pri mer operando
+        lastOperand = resultScreenCalculator.textContent
 
-    // Actualizo el valor de la variable que referencia a la operación
-    operationToDo = 'division'
+        // Actualizo el valor de la variable que referencia a la operación
+        operationToDo = 'division'
 
-    // Limpio el contenido en pantalla
-    resultScreenCalculator.textContent = ""
+        // Limpio el contenido en pantalla
+        resultScreenCalculator.textContent = ""
+    } else {
+        // Actualizo el valor de la variable que referencia a la operación
+        operationToDo = 'division'
+    }
+    
 })
 
 btn_multiply_operation.addEventListener('click', function() {
 
-    // Marco el valor actual en pantalla como primer operando
-    lastOperand = resultScreenCalculator.textContent
+    if (resultScreenCalculator.textContent != "") {
+        // Marco el valor actual en pantalla como pri mer operando
+        lastOperand = resultScreenCalculator.textContent
 
-    // Actualizo el valor de la variable que referencia a la operación
-    operationToDo = 'multiply'
+        // Actualizo el valor de la variable que referencia a la operación
+        operationToDo = 'multiply'
 
-    // Limpio el contenido en pantalla
-    resultScreenCalculator.textContent = ""
+        // Limpio el contenido en pantalla
+        resultScreenCalculator.textContent = ""
+    } else {
+        // Actualizo el valor de la variable que referencia a la operación
+        operationToDo = 'multiply'
+    }
 })
 
 btn_substract_operation.addEventListener('click', function() {
 
-    // Marco el valor actual en pantalla como primer operando
-    lastOperand = resultScreenCalculator.textContent
+    if (resultScreenCalculator.textContent != "") {
+        // Marco el valor actual en pantalla como pri mer operando
+        lastOperand = resultScreenCalculator.textContent
 
-    // Actualizo el valor de la variable que referencia a la operación
-    operationToDo = 'substract'
+        // Actualizo el valor de la variable que referencia a la operación
+        operationToDo = 'substract'
 
-    // Limpio el contenido en pantalla
-    resultScreenCalculator.textContent = ""
+        // Limpio el contenido en pantalla
+        resultScreenCalculator.textContent = ""
+    } else {
+        // Actualizo el valor de la variable que referencia a la operación
+        operationToDo = 'substract'
+    }
 })
 
 btn_add_operation.addEventListener('click', function() {
 
-    // Marco el valor actual en pantalla como primer operando
-    lastOperand = resultScreenCalculator.textContent
+    if (resultScreenCalculator.textContent != "") {
+        // Marco el valor actual en pantalla como pri mer operando
+        lastOperand = resultScreenCalculator.textContent
 
-    // Actualizo el valor de la variable que referencia a la operación
-    operationToDo = 'add'
+        // Actualizo el valor de la variable que referencia a la operación
+        operationToDo = 'add'
 
-    // Limpio el contenido en pantalla
-    resultScreenCalculator.textContent = ""
+        // Limpio el contenido en pantalla
+        resultScreenCalculator.textContent = ""
+    } else {
+        // Actualizo el valor de la variable que referencia a la operación
+        operationToDo = 'add'
+    }
 })
