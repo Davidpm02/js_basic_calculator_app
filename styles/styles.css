@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'segment-7';
+    src: url('../assets/fonts/segment7-font/Segment7-4Gml.otf') format('opentype');
+}
+
+
 body {
     background-color: #424242;
 }
@@ -44,6 +50,16 @@ body {
     overflow: hidden;
     position: absolute;
     z-index: 2;
+}
+
+.calc_result_screen > p {
+    margin: 0;
+    font-family: 'segment-7', sans-serif;
+    font-weight: bold;
+    text-align: right;
+    padding: 10px;
+    color: #000000;
+    font-size: 40px;
 }
 
 .calc_result_screen::before {
