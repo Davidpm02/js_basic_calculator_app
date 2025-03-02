@@ -261,7 +261,6 @@ btn_division_operation.addEventListener('click', function() {
         // Actualizo el valor de la variable que referencia a la operación
         operationToDo = 'division'
     }
-    
 })
 
 btn_multiply_operation.addEventListener('click', function() {
